@@ -488,10 +488,10 @@
   //#define PID_PARAMS_PER_HOTEND // Uses separate PID parameters for each extruder (useful for mismatched extruders)
                                   // Set/get with gcode: M301 E[extruder number, 0-2]
 
-  // Trianglelab AL-BMG-Air
-  #define DEFAULT_Kp 15.01
-  #define DEFAULT_Ki 1.22
-  #define DEFAULT_Kd 46.32
+  // Trianglelab AL-BMG-Air with Volcano tuned at 255C
+  #define DEFAULT_Kp 20.99
+  #define DEFAULT_Ki 1.86
+  #define DEFAULT_Kd 59.32
 
 #endif // PIDTEMP
 
@@ -512,7 +512,7 @@
  * heater. If your configuration is significantly different than this and you don't understand
  * the issues involved, don't use bed PID until someone else verifies that your hardware works.
  */
-//#define PIDTEMPBED
+#define PIDTEMPBED
 
 //#define BED_LIMIT_SWITCHING
 
@@ -528,10 +528,10 @@
   //#define MIN_BED_POWER 0
   //#define PID_BED_DEBUG // Sends debug data to the serial port.
 
-  // Creality Ender-3 Pro
-  #define DEFAULT_bedKp 50.71
-  #define DEFAULT_bedKi 9.88
-  #define DEFAULT_bedKd 173.43
+  // Tuned at 110C
+  #define DEFAULT_bedKp 163.61
+  #define DEFAULT_bedKi 27.21
+  #define DEFAULT_bedKd 655.74
 
   // FIND YOUR OWN: "M303 E-1 C8 S90" to run autotune on the bed at 90 degreesC for 8 cycles.
 #endif // PIDTEMPBED
