@@ -488,10 +488,10 @@
   //#define PID_PARAMS_PER_HOTEND // Uses separate PID parameters for each extruder (useful for mismatched extruders)
                                   // Set/get with gcode: M301 E[extruder number, 0-2]
 
-  // Trianglelab AL-BMG-Air with Volcano tuned at 255C
-  #define DEFAULT_Kp 20.99
-  #define DEFAULT_Ki 1.86
-  #define DEFAULT_Kd 59.32
+  // Trianglelab AL-BMG-Air with V6 tuned at 255C
+  #define DEFAULT_Kp 19.02
+  #define DEFAULT_Ki 1.63
+  #define DEFAULT_Kd 55.66
 
 #endif // PIDTEMP
 
@@ -975,7 +975,7 @@
  *     |    [-]    |
  *     O-- FRONT --+
  */
-#define NOZZLE_TO_PROBE_OFFSET { 19, -24.8, -4.4 }
+#define NOZZLE_TO_PROBE_OFFSET { 19, -24.8, -3.88 }
 
 // Most probes should stay away from the edges of the bed, but
 // with NOZZLE_AS_PROBE this can be negative for a wider probing area.
@@ -999,8 +999,8 @@
  * A total of 2 does fast/slow probes with a weighted average.
  * A total of 3 or more adds more slow probes, taking the average.
  */
-//#define MULTIPLE_PROBING 2
-//#define EXTRA_PROBING    1
+#define MULTIPLE_PROBING 3
+#define EXTRA_PROBING    1
 
 /**
  * Z probes require clearance when deploying, stowing, and moving between
